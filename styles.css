@@ -1,45 +1,3 @@
-body {
-  background-color: #f7efe8;
-  color: #2c2a28;
-  font-family: system-ui, sans-serif;
-  margin: 0;
-}
-
-header,
-footer {
-  background-color: #2b2a28;
-  color: #f4efe8;
-}
-
-h1,
-h2 {
-  color: #46322b;
-}
-
-nav a {
-  color: #f4efe8;
-  text-decoration: none;
-}
-
-.brand {
-  display: inline-block;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.tagline {
-  color: #5d3d31;
-  font-style: italic;
-}
-
-.price {
-  color: #b03a2e;
-}
-
-/* Base color stage for Exercise 04 */
-
 :root {
   --bg: #f7f3f1;
   --text: #2b2b2b;
@@ -48,14 +6,20 @@ nav a {
   --accent: #3b2b28;
   --tagline: #5b3b36;
   --price: #a42b2b;
+  --max-width: 1100px;
+  --container-padding: 1.6rem;
 }
 
-html,
-body {
-  height: 100%;
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  min-height: 100%;
   background-color: var(--bg);
   color: var(--text);
   font-family:
@@ -65,46 +29,316 @@ body {
     "Segoe UI",
     Roboto,
     "Helvetica Neue",
-    Arial;
+    Arial,
+    sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* dark header + footer */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
 header,
 footer {
   background-color: var(--header-bg);
   color: var(--header-text);
+  text-align: center;
 }
 
-/* headings color group */
-h1,
-h2 {
-  color: var(--accent);
+header .container,
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  padding: 1.2rem var(--container-padding);
 }
 
-/* nav links via descendant selector */
-nav a {
-  color: var(--header-text);
-  text-decoration: none;
-}
-
-/* brand and small helpers */
-.brand {
+.brand,
+.brand a {
   font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--header-text);
   text-decoration: none;
+  display: inline-block;
 }
 
-/* tagline on menu page */
+/* Navigation */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  margin: 0 0 1.2rem 0;
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--accent);
+  line-height: 1.1;
+}
+h1 {
+  font-size: 3.6rem;
+  letter-spacing: 0.02em;
+}
+h2 {
+  font-size: 2.4rem;
+}
+
+main {
+  padding: 2.4rem var(--container-padding) 4rem;
+}
+main .container {
+  padding: 0;
+}
+
+figure {
+  margin: 0 0 2rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
 .tagline {
   color: var(--tagline);
   font-style: italic;
+  margin: 0 0 1.6rem 0;
 }
-
-/* price class for spans */
 .price {
   color: var(--price);
   font-weight: 600;
+}
+
+footer p {
+  margin: 0;
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+  color: var(--header-text);
+}
+
+main p {
+  text-align: left;
+  margin: 0 0 1.2rem 0;
+}
+
+a:focus,
+a:hover {
+  outline: 3px solid rgba(255, 255, 255, 0.08);
+  outline-offset: 2px;
+}
+:focus {
+  outline: 2px solid #0a84ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  header .container,
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .brand {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+:root {
+  --bg: #f7f3f1;
+  --text: #2b2b2b;
+  --header-bg: #222222;
+  --header-text: #ffffff;
+  --accent: #3b2b28;
+  --tagline: #5b3b36;
+  --price: #a42b2b;
+  --max-width: 1100px;
+  --container-padding: 1.6rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family:
+    "Lato",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+header,
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+}
+
+header .container,
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  padding: 1.2rem var(--container-padding);
+}
+
+.brand,
+.brand a {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--header-text);
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  margin: 0 0 1.2rem 0;
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--accent);
+  line-height: 1.1;
+}
+h1 {
+  font-size: 3.6rem;
+  letter-spacing: 0.02em;
+}
+h2 {
+  font-size: 2.4rem;
+}
+
+main {
+  padding: 2.4rem var(--container-padding) 4rem;
+}
+main .container {
+  padding: 0;
+}
+
+figure {
+  margin: 0 0 2rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+.tagline {
+  color: var(--tagline);
+  font-style: italic;
+  margin: 0 0 1.6rem 0;
+}
+.price {
+  color: var(--price);
+  font-weight: 600;
+}
+
+footer p {
+  margin: 0;
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+  color: var(--header-text);
+}
+
+main p {
+  text-align: left;
+  margin: 0 0 1.2rem 0;
+}
+
+a:focus,
+a:hover {
+  outline: 3px solid rgba(255, 255, 255, 0.08);
+  outline-offset: 2px;
+}
+:focus {
+  outline: 2px solid #0a84ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  header .container,
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .brand {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 }
