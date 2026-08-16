@@ -1,0 +1,110 @@
+body {
+  background-color: #f7efe8;
+  color: #2c2a28;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+header,
+footer {
+  background-color: #2b2a28;
+  color: #f4efe8;
+}
+
+h1,
+h2 {
+  color: #46322b;
+}
+
+nav a {
+  color: #f4efe8;
+  text-decoration: none;
+}
+
+.brand {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  color: #5d3d31;
+  font-style: italic;
+}
+
+.price {
+  color: #b03a2e;
+}
+
+/* Base color stage for Exercise 04 */
+
+:root {
+  --bg: #f7f3f1;
+  --text: #2b2b2b;
+  --header-bg: #222222;
+  --header-text: #ffffff;
+  --accent: #3b2b28;
+  --tagline: #5b3b36;
+  --price: #a42b2b;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family:
+    "Lato",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* dark header + footer */
+header,
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+/* headings color group */
+h1,
+h2 {
+  color: var(--accent);
+}
+
+/* nav links via descendant selector */
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+}
+
+/* brand and small helpers */
+.brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  color: var(--header-text);
+  text-decoration: none;
+}
+
+/* tagline on menu page */
+.tagline {
+  color: var(--tagline);
+  font-style: italic;
+}
+
+/* price class for spans */
+.price {
+  color: var(--price);
+  font-weight: 600;
+}
