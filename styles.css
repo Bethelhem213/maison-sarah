@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family:
     "Lato",
@@ -39,7 +39,6 @@ body {
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
-
 .header-bar {
   display: flex;
   align-items: center;
@@ -47,7 +46,6 @@ body {
   gap: 1.6rem;
   padding: 1.2rem 0;
 }
-
 .brand,
 .brand a {
   font-family: "Playfair Display", Georgia, serif;
@@ -67,7 +65,6 @@ nav ul {
   padding: 0;
   display: flex;
   gap: 1.2rem;
-  align-items: center;
 }
 nav a {
   color: var(--header-text);
@@ -77,11 +74,10 @@ nav a {
 
 header,
 footer {
-  background-color: var(--header-bg);
+  background: var(--header-bg);
   color: var(--header-text);
   text-align: center;
 }
-
 header .container,
 footer .container {
   display: flex;
@@ -94,10 +90,6 @@ footer .container {
 main {
   padding: 2.4rem 0 4rem;
 }
-footer {
-  padding: 1.2rem 0;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -135,7 +127,7 @@ h2 {
   margin-top: 1.6rem;
 }
 .card {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 6px;
   padding: 1.2rem;
@@ -162,6 +154,111 @@ h2 {
   margin-top: auto;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: 1.6rem;
+  background: #fff;
+}
+th,
+td {
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: left;
+  vertical-align: middle;
+}
+thead th {
+  background: var(--header-bg);
+  color: var(--header-text);
+  font-weight: 700;
+}
+tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+form {
+  margin-top: 1.2rem;
+}
+fieldset {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+}
+legend {
+  font-weight: 700;
+  padding: 0 0.4rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+.field {
+  font-family: inherit;
+  padding: 0.8rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 40rem;
+  font-size: 1.6rem;
+}
+.field:focus {
+  outline: 3px solid rgba(58, 43, 40, 0.12);
+  outline-offset: 2px;
+}
+.field[required] {
+  box-shadow: 0 0 0 3px rgba(164, 43, 43, 0.04);
+}
+
+.choice {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+.choice label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 400;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--price);
+}
+
+button[type="submit"] {
+  background: var(--price);
+  color: #fff;
+  border: 0;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button[type="submit"]:focus,
+button[type="submit"]:hover {
+  filter: brightness(0.95);
+  outline: 3px solid rgba(255, 255, 255, 0.06);
+  outline-offset: 2px;
+}
+
+footer p {
+  margin: 0;
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+  color: var(--header-text);
+}
+
+a:focus,
+a:hover {
+  outline: 3px solid rgba(255, 255, 255, 0.08);
+  outline-offset: 2px;
+}
 @media (max-width: 640px) {
   header .container,
   footer .container {

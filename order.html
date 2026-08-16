@@ -31,10 +31,141 @@
     <main>
       <div class="container">
         <h1>Pre-Order</h1>
-        <p>
-          Our pre-order form is coming soon. Check back shortly to reserve your
-          favourites ahead of time.
-        </p>
+
+        <form action="#" method="get" aria-label="Pre-order form">
+          <fieldset>
+            <legend>Who is picking up</legend>
+
+            <label for="name"
+              >Full name <span aria-hidden="true">*</span></label
+            >
+            <input
+              id="name"
+              name="name"
+              class="field"
+              type="text"
+              placeholder="Your full name"
+              required
+            />
+
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input
+              id="email"
+              name="email"
+              class="field"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Pickup day & time</legend>
+
+            <div class="choice" role="radiogroup" aria-label="Pickup day">
+              <label for="day-fr"
+                ><input id="day-fr" name="day" type="radio" value="Friday" />
+                Friday</label
+              >
+              <label for="day-sa"
+                ><input
+                  id="day-sa"
+                  name="day"
+                  type="radio"
+                  value="Saturday"
+                  checked
+                />
+                Saturday</label
+              >
+              <label for="day-su"
+                ><input id="day-su" name="day" type="radio" value="Sunday" />
+                Sunday</label
+              >
+            </div>
+
+            <label for="time">Pickup time</label>
+            <select id="time" name="time" class="field">
+              <option value="08:00">08:00</option>
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your order</legend>
+
+            <div class="choice" role="group" aria-label="Products">
+              <label for="item-sourdough"
+                ><input
+                  id="item-sourdough"
+                  name="items"
+                  type="checkbox"
+                  value="Sourdough Loaf"
+                />
+                Sourdough Loaf</label
+              >
+              <label for="item-rye"
+                ><input
+                  id="item-rye"
+                  name="items"
+                  type="checkbox"
+                  value="Country Rye"
+                />
+                Country Rye</label
+              >
+              <label for="item-croissant"
+                ><input
+                  id="item-croissant"
+                  name="items"
+                  type="checkbox"
+                  value="Classic Croissant"
+                />
+                Classic Croissant</label
+              >
+              <label for="item-pain"
+                ><input
+                  id="item-pain"
+                  name="items"
+                  type="checkbox"
+                  value="Pain au Chocolat"
+                />
+                Pain au Chocolat</label
+              >
+              <label for="item-tart"
+                ><input
+                  id="item-tart"
+                  name="items"
+                  type="checkbox"
+                  value="Lemon Tart"
+                />
+                Lemon Tart</label
+              >
+              <label for="item-scone"
+                ><input
+                  id="item-scone"
+                  name="items"
+                  type="checkbox"
+                  value="Berry Scone"
+                />
+                Berry Scone</label
+              >
+            </div>
+
+            <label for="notes">Notes (allergies, requests)</label>
+            <textarea
+              id="notes"
+              name="notes"
+              class="field"
+              rows="4"
+              placeholder="Any special requests?"
+            ></textarea>
+          </fieldset>
+
+          <button type="submit">Submit Pre-Order</button>
+        </form>
       </div>
     </main>
 
