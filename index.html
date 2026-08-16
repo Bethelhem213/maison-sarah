@@ -1,51 +1,73 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Maison Sarah - Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <div class="brand">
+      <div class="container">
         <a class="brand" href="index.html">Maison Sarah</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="order.html">Order</a></li>
-        </ul>
-      </nav>
     </header>
+
     <main>
-      <h1>Welcome to Maison Sarah</h1>
-      <p>
-        At Maison Sarah, we pride ourselves on our
-        <strong>handmade breads</strong> and <em>pastries</em> crafted with the
-        finest ingredients.
-      </p>
-      <img
-        src="images/bakery.jpg"
-        alt="A selection of freshly baked breads and pastries displayed in our bakery."
-      />
-      <section>
-        <h2>Find Us</h2>
-        <p>Visit us at:</p>
-        <address>123 Bakery Lane, Flavor Town, FT 45678</address>
+      <div class="container">
+        <h1>Welcome to Maison Sarah</h1>
+
         <p>
-          <a
-            href="https://www.google.com/maps?q=123+Bakery+Lane,+Flavor+Town,+FT+45678"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get directions</a
-          >
+          We bake <em>fresh each morning</em> using simple, honest ingredients
+          and time-honoured techniques. Our breads and pastries are made with
+          <strong>care</strong>.
         </p>
-      </section>
+
+        <figure>
+          <img
+            src="images/bakery.jpg"
+            alt="A cozy bakery storefront displaying freshly baked croissants and sourdough bread in warm morning light."
+          />
+        </figure>
+
+        <section id="find-us">
+          <h2>Find Us</h2>
+          <address>
+            Maison Sarah Bakery<br />
+            123 Bakery Lane<br />
+            Breadtown, BT 12345
+          </address>
+          <p>
+            <a
+              href="https://www.google.com/maps?q=123+Bakery+Lane,+Breadtown,+BT+12345"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Get directions on Google Maps</a
+            >
+          </p>
+        </section>
+      </div>
     </main>
+
     <footer>
-      <p>&copy; 2023 Maison Sarah. All rights reserved.</p>
+      <div class="container">
+        <p>&copy; 2026 Maison Sarah. All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
