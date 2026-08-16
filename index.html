@@ -1,47 +1,159 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maison Sarah - Home</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Maison Sarah - Menu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="order.html">Order</a></li>
-        </ul>
-      </nav>
+      <div class="container header-bar">
+        <a class="brand" href="index.html">Maison Sarah</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
     <main>
-      <h1>Welcome to Maison Sarah</h1>
-      <p>
-        At Maison Sarah, we pride ourselves on our
-        <strong>handmade breads</strong> and <em>pastries</em> crafted with the
-        finest ingredients.
-      </p>
-      <img
-        src="images/bakery.jpg"
-        alt="A selection of freshly baked breads and pastries displayed in our bakery."
-      />
-      <section>
-        <h2>Find Us</h2>
-        <p>Visit us at:</p>
-        <address>123 Bakery Lane, Flavor Town, FT 45678</address>
-        <p>
-          <a
-            href="https://www.google.com/maps?q=123+Bakery+Lane,+Flavor+Town,+FT+45678"
-            target="_blank"
-            >Get directions</a
-          >
+      <div class="container">
+        <h1>Our Menu</h1>
+        <p class="tagline">
+          Explore our selection of handcrafted bakery favourites, baked fresh
+          every morning.
         </p>
-      </section>
+
+        <section>
+          <h2>Opening Hours</h2>
+          <table aria-describedby="hours-desc">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>08:00 — 16:00</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>08:00 — 16:00</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>08:00 — 16:00</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>08:00 — 18:00</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>08:00 — 18:00</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>07:30 — 14:00</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Price List</h2>
+          <table aria-describedby="prices-desc">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sourdough Loaf</td>
+                <td><span class="price">$6.50</span></td>
+              </tr>
+              <tr>
+                <td>Country Rye</td>
+                <td><span class="price">$7.00</span></td>
+              </tr>
+              <tr>
+                <td>Classic Croissant</td>
+                <td><span class="price">$3.25</span></td>
+              </tr>
+              <tr>
+                <td>Pain au Chocolat</td>
+                <td><span class="price">$4.00</span></td>
+              </tr>
+              <tr>
+                <td>Lemon Tart</td>
+                <td><span class="price">$5.50</span></td>
+              </tr>
+              <tr>
+                <td>Berry Scone</td>
+                <td><span class="price">$3.75</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Weekend Specials</h2>
+          <div class="card-row">
+            <article class="card">
+              <img
+                src="images/bakery.jpg"
+                alt="Freshly glazed cinnamon roll on a wooden board"
+              />
+              <h3>Cinnamon Morning Roll</h3>
+              <p class="price">$4.50</p>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/bakery.jpg"
+                alt="Flaky almond croissant topped with toasted almond slices"
+              />
+              <h3>Almond Croissant</h3>
+              <p class="price">$3.95</p>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/bakery.jpg"
+                alt="Mini lemon tart topped with fresh berries on a ceramic plate"
+              />
+              <h3>Mini Lemon Tart</h3>
+              <p class="price">$5.25</p>
+            </article>
+          </div>
+        </section>
+      </div>
     </main>
+
     <footer>
-      <p>&copy; 2023 Maison Sarah. All rights reserved.</p>
+      <div class="container">
+        <p>&copy; 2026 Maison Sarah. All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
